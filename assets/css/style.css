@@ -1,14 +1,17 @@
 .col-1 {
-    border: 1px solid black;
     text-align: center;
     padding: 8px;
     margin: 3px;
     border-radius: 50%;
 }
 
+h3 {
+    font-size: medium;
+}
+
 .text-box {
     border: 1px solid black;
-    height: 100px;
+    height: 70px;
 }
 
 #typed-text {
@@ -16,7 +19,7 @@
 }
 
 #changed {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 #changed .col-1 {
@@ -24,9 +27,28 @@
 }
 
 #pressed {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 #pressed .col-1 {
     background-color: blueviolet;
+}
+
+#plug-board {
+    margin-top: 10px;
+}
+
+.plug {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 3px solid darkgray;
+}
+
+.rotor {
+    border: 1px solid black;
+    text-align: center;
+    padding: 7px;
 }
