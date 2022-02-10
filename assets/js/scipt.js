@@ -20,15 +20,18 @@ function function1(e) {
     $("#" + e.key).css("background", "black");
     $("#typed-text").text(e.key);
     $("#changed-text").text(random);
-    $("#" + random).css("background", "black");
-
+    $("#" + random).css("color", "yellow");
+    $("#" + random).css("border", "3px solid yellow");
 
 }
 
+
 function function2(e, random) {
 
-    $("#" + e.key).css("background", "orange");
+    $("#" + e.key).css("background", "rgb(46, 46, 46)");
     for (let i = 65; i < 91; i++) {
-        $("#" + i).css("background", "blueviolet");
+        $("#" + i).css("color", "white");
+        $("#" + random).css("border", "");
     }
+
 }
