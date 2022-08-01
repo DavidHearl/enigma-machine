@@ -1,37 +1,35 @@
-const log = $('body');
-document.addEventListener('keydown', function1);
-document.addEventListener('keyup', function2);
-
-// key = letter
-// code = key'letter'
-// keyCode = unicode
+// Create a global varible for input and output
+var inputString
+var outputString
 
 
+// Listen for a pressed key
+document.body.addEventListener('keydown', function (event) {
 
-function randomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
+	// Store pressed key in a local variable
+	let keypressed = event.key
+
+	// If input string has no value assign it to the value of keypressed
+	if (inputString == undefined) {
+		inputString = keypressed
+	} else {
+		if (!['Enter', 'Backspace', 'CapsLock'].includes(event.key)) {
+			inputString = inputString + keypressed
+			// outputString = outputString + Math.random()
+		}
+	}
+
+	// Remove Character when pressing backspace
+	if (event.key == 'Backspace') {
+		inputString = inputString.substring(0, inputString.length - 1);
+	}
+
+	// Log to console value of input string when enter is pressed
+	if (event.key == 'Enter') {
+		console.log(inputString)
+		// console.log(outputString)
+	}
+
+});
 
 
-
-function function1(e) {
-
-    var random = randomInt(65, 90);
-    $("#" + e.key).css("background", "black");
-    $("#typed-text").text(e.key);
-    $("#changed-text").text(random);
-    $("#" + random).css("color", "yellow");
-    $("#" + random).css("border", "3px solid yellow");
-
-}
-
-
-function function2(e, random) {
-
-    $("#" + e.key).css("background", "rgb(46, 46, 46)");
-    for (let i = 65; i < 91; i++) {
-        $("#" + i).css("color", "white");
-        $("#" + random).css("border", "");
-    }
-
-}
